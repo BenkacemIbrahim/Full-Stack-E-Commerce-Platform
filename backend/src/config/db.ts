@@ -1,9 +1,23 @@
 import mongoose from "mongoose"
+import { MongoMemoryServer } from "mongodb-memory-server"
 import { env } from "./env"
 
+let mongoServer: MongoMemoryServer | null = null
+
 export async function connectDB() {
-  if (!env.mongoUri) {
-    throw new Error("MONGODB_URI is required")
+  try {
+    if (env.mongoUri) {
+      await mongoose.connect(env.mongoUri, { serverSelectionTimeoutMS: 2000 })
+      console.log("Connected to MongoDB via URI")
+      return
+    }
+  } catch (err) {
+    console.log("Local MongoDB not available, initializing MongoMemoryServer...")
   }
-  await mongoose.connect(env.mongoUri)
+
+  mongoServer = await MongoMemoryServer.create()
+  const uri = mongoServer.getUri()
+  await mongoose.connect(uri)
+  console.log("Connected to MongoMemoryServer at:", uri)
 }
+

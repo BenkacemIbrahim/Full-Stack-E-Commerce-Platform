@@ -40,7 +40,7 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="bg-[#111] border border-[#222] rounded-lg p-8 shadow-2xl">
+        <div className="bg-[#111] border border-[#222] rounded-xl p-8 pb-12 shadow-2xl">
           {/* Logo */}
           <div className="mb-8 text-center">
             <h1 className="text-3xl font-serif font-bold text-white mb-2">BR.</h1>
@@ -58,7 +58,7 @@ export default function AdminLoginPage() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="admin@br.com"
+                  placeholder="admin@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -99,19 +99,6 @@ export default function AdminLoginPage() {
               {loading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
-
-          {/* Demo Credentials */}
-          <div className="mt-6 pt-6 border-t border-[#222]">
-            <p className="text-xs text-gray-500 text-center mb-2">Demo Credentials</p>
-            <div className="bg-[#1a1a1a] border border-[#222] rounded p-3 text-xs font-mono">
-              <div className="text-gray-400">
-                Email: <span className="text-gray-300">admin@br.com</span>
-              </div>
-              <div className="text-gray-400">
-                Password: <span className="text-gray-300">admin123</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Footer */}

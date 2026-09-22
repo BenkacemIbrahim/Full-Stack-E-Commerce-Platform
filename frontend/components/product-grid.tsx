@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Heart, ShoppingCart, Star } from "lucide-react"
 import Link from "next/link"
+import { BrandLogo } from "@/components/brand-logo"
 
 interface Product {
   id: string
@@ -64,7 +65,7 @@ export function ProductGrid({ products, columns = 4 }: ProductGridProps) {
           </div>
 
           <div className="p-5">
-            <p className="text-sm text-muted-foreground mb-1.5 font-medium uppercase tracking-wider">{product.brand}</p>
+            <BrandLogo brand={product.brand} className="mb-2" />
             <Link href={`/products/${product.id}`}>
               <h3 className="font-semibold text-lg mb-3 hover:text-primary transition-colors line-clamp-2 leading-snug">
                 {product.name}

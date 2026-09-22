@@ -75,7 +75,7 @@ const newArrivals = [
     name: "Ultraboost Light",
     brand: "Adidas",
     price: 189.99,
-    image: "/images/shoes.png",
+    image: "/adidas-ultraboost-white.jpg",
     rating: 4.9,
     reviewCount: 145,
     badge: "New",

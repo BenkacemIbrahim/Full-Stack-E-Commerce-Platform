@@ -7,7 +7,6 @@ import { PromoBanner } from "@/components/promo-banner"
 import { Footer } from "@/components/footer"
 
 const productImages = [
-  "/images/original-964e7c7ed9c77cfa90cf565645804613.webp",
   "/reebok-zig-kinetica-side.jpg",
   "/reebok-zig-kinetica-back.jpg",
   "/reebok-zig-kinetica-sole.jpg",

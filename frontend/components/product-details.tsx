@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Heart, Truck, ShieldCheck, RotateCcw } from "lucide-react"
+import { Heart, Truck, ShieldCheck, RotateCcw, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Star } from "lucide-react"
+import { BrandLogo } from "@/components/brand-logo"
 
 interface ProductDetailsProps {
   brand: string
@@ -23,10 +23,10 @@ export function ProductDetails({ brand, name, price, rating, reviewCount, colors
   return (
     <div className="space-y-8">
       <div className="flex items-center gap-3">
-        <div className="h-10 w-10 rounded-full bg-foreground flex items-center justify-center text-background text-sm font-bold">
-          R
+        <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center p-2 border border-border shadow-sm overflow-hidden">
+          <BrandLogo brand={brand} showText={false} logoClassName="h-full w-full object-contain" />
         </div>
-        <span className="text-sm font-medium tracking-wide uppercase">{brand}</span>
+        <span className="text-sm font-semibold tracking-wider uppercase text-foreground">{brand}</span>
       </div>
 
       <div>

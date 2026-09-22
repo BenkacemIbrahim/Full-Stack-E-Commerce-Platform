@@ -22,7 +22,7 @@ const topProducts = [
     name: "Zig Kinetica 3",
     brand: "Reebok",
     price: 199.0,
-    image: "/images/original-964e7c7ed9c77cfa90cf565645804613.webp",
+    image: "/reebok-zig-kinetica-side.jpg",
     rating: 4.8,
     reviewCount: 342,
   },

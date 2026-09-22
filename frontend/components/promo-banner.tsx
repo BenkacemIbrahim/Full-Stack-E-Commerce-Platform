@@ -14,13 +14,19 @@ export function PromoBanner() {
             Shop from our curated selection of top brands offering special savings of 25% or more.
           </p>
           <div className="flex gap-3 mb-8">
-            <div className="flex -space-x-2">
-              {["M", "C", "C", "P"].map((letter, i) => (
+            <div className="flex -space-x-3">
+              {[
+                { name: "Nike", logo: "/logos/nike.svg" },
+                { name: "Adidas", logo: "/logos/adidas.svg" },
+                { name: "Puma", logo: "/logos/puma.svg" },
+                { name: "Reebok", logo: "/logos/reebok.svg" },
+              ].map((brand, i) => (
                 <div
                   key={i}
-                  className="h-12 w-12 rounded-full bg-foreground text-background flex items-center justify-center font-bold border-2 border-background"
+                  className="h-12 w-12 rounded-full bg-white flex items-center justify-center p-2.5 border-2 border-background shadow-md overflow-hidden group hover:scale-110 transition-transform"
+                  title={brand.name}
                 >
-                  {letter}
+                  <img src={brand.logo} alt={brand.name} className="h-full w-full object-contain" />
                 </div>
               ))}
             </div>
